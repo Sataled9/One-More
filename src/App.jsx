@@ -21,11 +21,11 @@ function App() {
 
 // Changes the current page when the user selects a different page
 function navigateToPage(pageName) {
-    if (page[pageName]) {
+    if (pages[pageName]) {
         setCurrentPage(pageName)
     }
 }
 //Gives every page access to the same navigation function.
 return <CurrentPage onNavigation={navigateToPage} />;
-
+}
 export default App;

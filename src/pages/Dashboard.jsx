@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import WorkoutCard from "../components/WorkoutCard";
+import BottomMenu from "../components/BottomMenu";
 
 import fitnessIcon from "../assets/icons/fitness.svg";
 import runningIcon from "../assets/icons/running.png";
@@ -85,7 +86,7 @@ function Dashboard({ onNavigate }) {
         </section>
       </main>
 
-     
+     <BottomMenu activeItem="home" onNavigate={onNavigate} />
     </div>
   );
 }

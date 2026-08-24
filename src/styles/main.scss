@@ -1,4 +1,5 @@
-@use "normalize";
-@use "reset";
-@use "layout";
-@use "components";
+@use "./variables";
+@use "./reset";
+@use "./normalize";
+@use "./layout";
+@use "./components";

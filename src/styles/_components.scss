@@ -113,7 +113,7 @@
 //Workout card end
 
 //Dashboard page style start
-.dashboard { // riparato
+.dashboard { ////////////////****
   flex: 1;
   min-height: 0;
   padding: 0 24px 12px;
@@ -124,7 +124,7 @@
     display: none;
   }
 
-  &__workout {
+  &__workouts {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -165,18 +165,18 @@
 .today-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: ceneter;
+    align-items: center;
     width: 100%;
     height: 112px;
     min-height: 112px;
     padding: 18px 22px;
     color: $color-accent;
-    background-color: $radius-card;
+    background-color: $color-card;
 
     &__name {
         display: grid;
         grid-template-columns: 42px minmax(0, 1fr);
-        align-items: 0;
+        align-items: center;
         font-size: 1.05rem;
         font-weight: 700;
         line-height: 1.15;
@@ -200,7 +200,7 @@
         align-items: baseline;
         gap: 10px;
         margin: 0;
-        white-space: nowarp;
+        white-space: nowrap;
 
         strong {
             font-size: 1rem;
@@ -267,7 +267,7 @@
         }
     }
     .dashboard {
-        &__workout {
+        &__workouts {
             gap: 9px;
         }
 
@@ -328,10 +328,293 @@
             height: 34px;
         }
 
-        &__active {
+        &--active {
             background-color: $color-accent-dark;
             opacity: 1;
         }
     }
 }
+//Bottom menu component end
 
+//Fitness page start
+.fitness {
+    flex: 1;
+    padding: 0 16px 24px;
+    overflow-y: auto;
+
+
+    &__dates {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+
+    &__muscles {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 8px;
+        margin-top: 18px;
+        padding: 14px 10px;
+        background-color: $color-card;
+        border-radius: $radius-card;
+    }
+
+    &__exercise-list {
+        margin-top: 22px;
+
+        > h2 {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        padding-right: 10px;
+        padding-left: 10px;
+
+        &__dates,
+        &__muscles {
+            gap: 5px;
+        }
+    }
+}
+//Fitness style page end
+
+//Date card component styles start
+.date-card {
+    display: flex;
+    min-width: 0;
+    min-height: 82px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    columns: $color-background-font;
+    cursor: pointer;
+    background-color: $color-card;
+    border: 0;
+    border-radius: 18px;
+
+    &__day {
+        color: $color-accent;
+        font-size: 0.9rem;
+    }
+
+    &__number {
+        font-size: 1.55rem;
+        font-weight: 700;
+    }
+
+    &--active {
+        background-color: $color-accent;
+
+        .date-card__day {
+            color: $color-background-font;
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+    }
+
+    @media (max-width: 360px) {
+        min-height: 74px;
+
+        &__day {
+            font-size: 0.8rem;
+        }
+    }
+}
+//Date card component end
+
+//muscle card component style starz
+.muscle-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 4px;
+    color: $color-background-font;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: 16px;
+
+    img {
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+    
+        @media (max-width: 360px) {
+            width: 46px;
+            height: 46px;
+        }
+    }
+
+    span {
+        overflow: hidden;
+        max-width: 100%;
+        color: $color-background-font;
+        font-size: 0.76rem;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &--active {
+        background-color: $color-accent;
+    }
+}
+
+//muscle card style end
+
+//Exercise preview component style start
+.exercise-preview {
+    position: relative;
+    min-height: 260px;
+    margin-top: 18px;
+    overflow: hidden;
+    background: linear-gradient(110deg, $color-accent-dark, $color-background);
+    border-radius: $radius-card;
+
+    > img {
+        width: 100%;
+        height: 260px;
+        object-fit: contain;
+        background-color: #07161d;
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: grid;
+        width: 62px;
+        height: 62px;
+        place-items: center;
+        background-color: $color-background-font;
+        border-radius: 50%;
+        opacity: 0.7;
+        transform:  translate(-50%, -70%);
+        
+        &::after {
+            width: 0;
+            height: 0;
+            margin-left: 6px;
+            border-top: 13 solid trasparent;
+            border-bottom: 13 solid trasparent;
+            border-left: 21 solid $color-background;
+            content: "";
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 34px 18px 16px;
+        background: linear-gradient(trasparent, rgba(0, 0, 0, 0.82));
+
+        h2 {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+    }
+}
+
+//exercise style component end
+
+//exercise card component style start 
+.exercise-card {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 78px;
+    margin-top: 10px;
+    padding: 14px;
+    background-color: $color-card;
+    border-radius: 18px;
+
+    &__checkbox {
+        width: 21px;
+        height: 21px;
+        margin: 0;
+        accent-color: $color-accent;
+    }
+
+    &__information {
+        min-width: 0;
+    }
+
+    &__name {
+        margin: 0;
+        overflow: hidden;
+        font-size: 0.92rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__details {
+        margin-top: 5px;
+        color: $color-gray-light;
+        font-size: 0.72rem;
+    }
+
+    &__weight {
+        color: $color-accent;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+}
+//exsercise card end
+
+//program timer start
+.program-timer {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: $color-card;
+    border-radius: 18px;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    &__title {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    &__value {
+        color: $color-accent;
+        font-size: 0.78;
+    }
+
+    &__track {
+        height: 7px;
+        margin-top: 12px;
+        overflow: hidden;
+        background-color: $color-background;
+        border-radius: 10px;
+    }
+
+    &__progress {
+        display: block;
+        width: 2%;
+        height: 100%;
+        background-color: $color-accent;
+        border-radius: inherit;
+    }
+}
+
+//program timer style end
+
+
+
+ 

@@ -13,18 +13,18 @@ const pages = {
     statistics: Statistics,
 }; 
 
-// Keeps track of which page is currently open in the app
+
 function App() {
     const [currentPage, setCurrentPage] = useState("dashboard");
     const CurrentPage = pages[currentPage]; 
 
-// Changes the current page when the user selects a different page
+//cchanges the current page when the user selects a different page
  function navigateToPage(pageName) {
     if (pages[pageName]) {
         setCurrentPage(pageName)
     }
 } 
-//Gives every page access to the same navigation function.
+
  return <CurrentPage onNavigation={navigateToPage} />;
 }
 export default App; 

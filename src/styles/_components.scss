@@ -615,6 +615,76 @@
 
 //program timer style end
 
+// Statistics page styles start
+.statistics {
+  flex: 1;
+  padding: 0 16px 24px;
+  overflow-y: auto;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 16px;
+    background-color: $color-card;
+    border-radius: $radius-card;
+  }
+
+  &__chart {
+    margin-top: 22px;
+    padding: 20px 14px 16px;
+    background-color: $color-card;
+    border-radius: $radius-card;
+
+    &-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      p {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+      }
+
+      strong {
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+
+      span {
+        color: $color-gray-light;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 4px;
+    color: $color-gray-light;
+    font-size: 0.62rem;
+    text-align: center;
+  }
+
+  @media (max-width: 360px) {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &__summary {
+      gap: 15px;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+}
+//statistics page styles end
 
 
  

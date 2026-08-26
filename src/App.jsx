@@ -1,39 +1,30 @@
 //Switch between the existing pages
-/* import { useState } from "react";
-import Dashboard from "./pages/Dashboard"; */
-/* import Fitness from "./pages/Fitness";
+import { useState } from "react";
+import Dashboard from "./pages/Dashboard"; 
+import Fitness from "./pages/Fitness";
 import Statistics from "./pages/Statistics";
-import Settings from "./pages/Settings"; */
 
 
-// All pages are stored here for bottom menu
-/* const pages = {
+
+//all pages are stored here for bottom menu
+const pages = {
     dashboard: Dashboard,
      fitness: Fitness,
     statistics: Statistics,
-    settings: Settings, 
-}; */
+}; 
 
 // Keeps track of which page is currently open in the app
-/* function App() {
+function App() {
     const [currentPage, setCurrentPage] = useState("dashboard");
-    const CurrentPage = pages[currentPage]; */
+    const CurrentPage = pages[currentPage]; 
 
 // Changes the current page when the user selects a different page
-/* function navigateToPage(pageName) {
+ function navigateToPage(pageName) {
     if (pages[pageName]) {
         setCurrentPage(pageName)
     }
-} */
+} 
 //Gives every page access to the same navigation function.
-/* return <CurrentPage onNavigation={navigateToPage} />;
+ return <CurrentPage onNavigation={navigateToPage} />;
 }
-export default App; */
-
-import Fitness from "./pages/Fitness";
-
-function App() {
-    return <Fitness />;
-}
-
-export default App;
+export default App; 

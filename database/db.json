@@ -1,0 +1,133 @@
+{
+  "workouts": [
+    {
+      "id": 1,
+      "name": "Fitness",
+      "badge": "8+",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Running",
+      "badge": "3+",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "HIIT",
+      "badge": "4+",
+      "isActive": false
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "name": "Day A",
+      "days": [
+        "Monday",
+        "Friday"
+      ],
+      "muscleGroups": [
+        "Chest",
+        "Shoulders",
+        "Triceps",
+        "Abs"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Day B",
+      "days": [
+        "Wednesday"
+      ],
+      "muscleGroups": [
+        "Biceps",
+        "Back",
+        "Forearms",
+        "Abs"
+      ]
+    }
+  ],
+  "exercises": [
+    { "id": 1, "programId": 1, "muscleGroup": "Chest", "name": "Dumbbell Svend Press", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "dumbbell-svend-press.gif" },
+    { "id": 2, "programId": 1, "muscleGroup": "Chest", "name": "Dumbbell Fly", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "dumbbell-fly.gif" },
+    { "id": 3, "programId": 1, "muscleGroup": "Chest", "name": "Flat Dumbbell Press", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "flat-dumbbell-press.gif" },
+    { "id": 4, "programId": 1, "muscleGroup": "Chest", "name": "Dumbbell Reverse Grip Press", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "reverse-grip-press.gif" },
+    { "id": 5, "programId": 1, "muscleGroup": "Shoulders", "name": "Lateral Front Raise to Lower", "sets": 2, "repetitions": 16, "weight": "5 kg", "gif": "lateral-front-raise-to-lower.gif" },
+    { "id": 6, "programId": 1, "muscleGroup": "Shoulders", "name": "Circles to Press", "sets": 2, "repetitions": 16, "weight": "5 kg", "gif": "circles-to-press.gif" },
+    { "id": 7, "programId": 1, "muscleGroup": "Shoulders", "name": "Rear Delt Fly to Raises", "sets": 2, "repetitions": 16, "weight": "5 kg", "gif": "rear-delt-fly-to-raises.gif" },
+    { "id": 8, "programId": 1, "muscleGroup": "Shoulders", "name": "Upright Rows + Flys", "sets": 2, "repetitions": 16, "weight": "5 kg", "gif": "upright-rows-and-flys.gif" },
+    { "id": 9, "programId": 1, "muscleGroup": "Triceps", "name": "Standing Dumbbell Tricep Extensions", "sets": 2, "repetitions": 16, "weight": "11-12 kg", "gif": "standing-dumbbell-tricep-extensions.gif" },
+    { "id": 10, "programId": 1, "muscleGroup": "Triceps", "name": "Dumbbell Tricep Kickbacks", "sets": 2, "repetitions": 16, "weight": "11-12 kg", "gif": "dumbbell-tricep-kickbacks.gif" },
+    { "id": 11, "programId": 1, "muscleGroup": "Triceps", "name": "Skull Crusher", "sets": 2, "repetitions": 16, "weight": "11-12 kg", "gif": "skull-crusher.gif" },
+    { "id": 12, "programId": 1, "muscleGroup": "Triceps", "name": "Parallel Bar Dips", "sets": 2, "repetitions": 16, "weight": "Bodyweight", "gif": "parallel-bar-dips.gif" },
+    { "id": 13, "programId": 1, "muscleGroup": "Abs", "name": "Abs Plank", "sets": 1, "durationSeconds": 120, "weight": "Bodyweight", "gif": "abs-plank.gif" },
+    { "id": 14, "programId": 2, "muscleGroup": "Biceps", "name": "Standing Dumbbell Curl", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "standing-dumbbell-curl.gif" },
+    { "id": 15, "programId": 2, "muscleGroup": "Biceps", "name": "Standing Hammer Curl", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "standing-hammer-curl.gif" },
+    { "id": 16, "programId": 2, "muscleGroup": "Biceps", "name": "Concentration Curl", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "concentration-curl.gif" },
+    { "id": 17, "programId": 2, "muscleGroup": "Biceps", "name": "Alternating Standing Dumbbell Curl", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "alternating-standing-dumbbell-curl.gif" },
+    { "id": 18, "programId": 2, "muscleGroup": "Back", "name": "Bent Over Dumbbell Row", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "bent-over-dumbbell-row.gif" },
+    { "id": 19, "programId": 2, "muscleGroup": "Back", "name": "Pendlay Row", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "pendlay-row.gif" },
+    { "id": 20, "programId": 2, "muscleGroup": "Back", "name": "Dumbbell Deadlift (or TRX)", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "dumbbell-deadlift.gif" },
+    { "id": 21, "programId": 2, "muscleGroup": "Back", "name": "Superman - Machine Deadlift", "sets": 2, "repetitions": 16, "weight": "10 kg", "gif": "superman-machine-deadlift.gif" },
+    { "id": 22, "programId": 2, "muscleGroup": "Forearms", "name": "Grip Dumbbell Wrist Curl", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "grip-dumbbell-wrist-curl.gif" },
+    { "id": 23, "programId": 2, "muscleGroup": "Forearms", "name": "Palms-up Wrist Curl", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "palms-up-wrist-curl.gif" },
+    { "id": 24, "programId": 2, "muscleGroup": "Forearms", "name": "Reverse Wrist Curl", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "reverse-wrist-curl.gif" },
+    { "id": 25, "programId": 2, "muscleGroup": "Forearms", "name": "Wrist Extension", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "wrist-extension.gif" },
+    { "id": 26, "programId": 2, "muscleGroup": "Abs", "name": "Abs Plank", "sets": 1, "durationSeconds": 120, "weight": "Bodyweight", "gif": "abs-plank.gif" }
+  ],
+  "runningSessions": [{
+    "id": 1,
+    "day": "Fast Running",
+    "distanceKm": 10
+  }
+],
+"hiitSessions": [{
+  "id": 1,
+  "day": "Tuesday",
+  "name": "HIIT",
+  "durationMinutes": 20,
+  "workSeconds": 40,
+  "restSeconds": 60
+  }
+ ],
+ "statistics": [{
+  "id": 1,
+  "name": "Weight loss",
+  "value": 7.4,
+  "unit": "kg",
+  "changePercent": 4.4,
+  "progressPercent": 66
+ },
+ {
+  "id": 2,
+  "name": "Calories",
+  "value": 42.24,
+  "unit": "Kcal",
+  "changePercent": 1.7,
+  "progressPercent": 24
+ },
+ {
+  "id": 3,
+  "name": "Stamina",
+  "value": 24.2,
+  "unit": "bpm",
+  "changePercent": -0.4,
+  "progressPercent": 51
+ }
+],
+  "weeklyStatistics": [
+    {
+      "id": 1,
+      "totalCalories": 1745,
+      "highlightedCalories": 1578
+    }
+  ],
+  "programTimers": [
+    {
+      "id": 1,
+      "durationDays": 60,
+      "daysRemaining": 60
+    }
+  ]
+}

@@ -106,7 +106,7 @@ const initialProgram = alternatePrograms(
 );
 
 //Keeps track of the day
-function Fitness({ onNavigate }) {
+function Fitness({ onNavigation }) {
   const [activeDayId, setActiveDayId] = useState(initialProgram.activeDayId);
   const [activeMuscleGroup, setActiveMuscleGroup] = useState(
     initialProgram.activeMuscleGroup,
@@ -183,7 +183,7 @@ function Fitness({ onNavigate }) {
 
 
   function goBackToDashboard() {
-    onNavigate("dashboard");
+    onNavigation("dashboard");
   }
 
   return (
@@ -284,7 +284,7 @@ function Fitness({ onNavigate }) {
         <Timer daysRemaining={60} />
       </main>
 
-      <BottomMenu activeItem="fitness" onNavigate={onNavigate} />
+      <BottomMenu activeItem="fitness" onNavigation={onNavigation} />
     </div>
   );
 }

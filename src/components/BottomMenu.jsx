@@ -3,7 +3,7 @@ import heartIcon from "../assets/icons/heart.svg";
 import statisticsIcon from "../assets/icons/statistics.svg";
 import settingsIcon from "../assets/icons/settings.svg";
 
-function BottomMenu({ activeItem, onNavigate }) {
+function BottomMenu({ activeItem, onNavigation }) {
     const homeItemClassName = activeItem === "home"
         ? "bottom-menu__item bottom-menu__item--active"
         : "bottom-menu__item";
@@ -27,7 +27,7 @@ function BottomMenu({ activeItem, onNavigate }) {
                     type="button"
                     aria-label="Dashboard"
                     aria-current={activeItem === "home" ? "page" :undefined}
-                    onClick={() => onNavigate("dashboard")}
+                    onClick={() => onNavigation("dashboard")}
                     >
                     <img src={homeIcon} alt="" />
                 </button>
@@ -37,7 +37,7 @@ function BottomMenu({ activeItem, onNavigate }) {
                     type="button"
                     aria-label="Fitness"
                     aria-current={activeItem === "fitness" ? "page" : undefined}
-                    onClick={() => onNavigate("fitness")} 
+                    onClick={() => onNavigation("fitness")} 
                     >
                     <img src={heartIcon} alt="" />
                 </button>
@@ -47,7 +47,7 @@ function BottomMenu({ activeItem, onNavigate }) {
                 type="button"
                 aria-label="Statistics"
                 aria-current={activeItem === "statistics" ? "page" : undefined}
-                onClick={() => onNavigate("statistics")}
+                onClick={() => onNavigation("statistics")}
                 >
                     <img src={statisticsIcon} alt="" />
                 </button>
@@ -57,7 +57,7 @@ function BottomMenu({ activeItem, onNavigate }) {
                 type="button"
                 aria-label="Settings"
                 aria-current={activeItem === "settings" ? "page" : undefined}
-                onClick={() => onNavigate("settings")}
+                onClick={() => onNavigation("settings")}
                 >
                     <img src={settingsIcon} alt="" />
                 </button>

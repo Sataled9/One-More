@@ -3,6 +3,7 @@ import { useState } from "react";
 import Dashboard from "./pages/Dashboard"; 
 import Fitness from "./pages/Fitness";
 import Statistics from "./pages/Statistics";
+import Settings from "./pages/Settings";    
 
 
 
@@ -11,6 +12,7 @@ const pages = {
     dashboard: Dashboard,
      fitness: Fitness,
     statistics: Statistics,
+    settings: Settings,
 }; 
 
 

@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 import BottomMenu from "../components/BottomMenu";
 
-function Statistics({ onNavigate }) {
+function Statistics({ onNavigation }) {
   function goBackToFitness() {
-    onNavigate("fitness");
+    onNavigation("fitness");
   }
 
   return (
@@ -155,7 +155,7 @@ function Statistics({ onNavigate }) {
         </section>
       </main>
 
-      <BottomMenu activeItem="statistics" onNavigate={onNavigate} />
+      <BottomMenu activeItem="statistics" onNavigation={onNavigation} />
     </div>
   );
 }

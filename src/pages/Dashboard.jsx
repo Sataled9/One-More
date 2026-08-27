@@ -3,12 +3,12 @@ import BottomMenu from "../components/BottomMenu";
 import WorkoutCard from "../components/WorkoutCard";
 
 import fitnessIcon from "../assets/icons/fitness.svg";
-import runningIcon from "../assets/icons/running.png";
+import runningIcon from "../assets/icons/running.svg";
 import hiitIcon from "../assets/icons/hiit.svg";
 
-function Dashboard({ onNavigate }) {
+function Dashboard({ onNavigation }) {
   function openFitnessPage() {
-    onNavigate("fitness");
+    onNavigation("fitness");
   }
 
   return (
@@ -82,7 +82,7 @@ function Dashboard({ onNavigate }) {
         </section>
       </main>
 
-      <BottomMenu activeItem="home" onNavigate={onNavigate} />
+      <BottomMenu activeItem="home" onNavigation={onNavigation} />
     </div>
   );
 }

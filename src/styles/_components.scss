@@ -86,11 +86,6 @@
         border-radius: $radius-small;
     }
 
-    &--active {
-        cursor: default;
-        box-shadow: 0 0 0 2px rgba(255,32,42, 0.22);
-    }
-
     &--inactive {
         cursor: not-allowed;
         opacity: 0.55;
@@ -172,6 +167,7 @@
     padding: 18px 22px;
     color: $color-accent;
     background-color: $color-card;
+    border-radius: 14px;
 
     &__name {
         display: grid;
@@ -389,7 +385,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    columns: $color-background-font;
+    color: $color-background-font;
     cursor: pointer;
     background-color: $color-card;
     border: 0;
@@ -686,5 +682,194 @@
 }
 //statistics page styles end
 
+//statistics card compoenent style start
+.statistic-card {
+    display: grid;
+    grid-template-columns: 54px 1fr 58px;
+    align-items: center;
+    gap: 12px;
 
+    &__icon {
+        display: grid;
+        width: 54px;
+        height: 54px;
+        place-items: center;
+        color: $color-background-font;
+        font-size: 0.7rem;
+        font-weight: 700;
+        background-color: #3d739e;
+        border-radius: 16px;
+    }
+
+    &__information {
+        min-width: 0;
+
+        h2 {
+            overflow: hidden;
+            color: $color-gray-light;
+            font-size: 0.88rem;
+            font-weight: 400;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        p {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        strong {
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+    }
+
+    &__change {
+        font-size: 0.72rem;
+        font-weight: 700;
+
+        &--positive {
+            color: #29df83;
+        }
+    }
+
+    &__progress {
+        display: grid;
+        width: 58px;
+        height: 58px;
+        place-items: center;
+        border-radius: 50%;
+
+        &::before {
+            grid-area: 1/1;
+            width: 44px;
+            height: 44px;
+            background-color: $color-card;
+            border-radius: 50%;
+            content: "";
+        }
+        span {
+            z-index: 1;
+            grid-area: 1/1;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        &--time {
+            background: conic-gradient($color-accent 0 66%, #3d739e 66% 100%);
+        }
+        &--calories {
+            background: conic-gradient($color-accent 0 74%, #3d739e 74% 100%);
+        }
+        &--efficiency {
+            background: conic-gradient($color-accent 0 84%, #3d739e 84% 100%);
+        }
+    }
+
+    @media (max-width: 360px) {
+        grid-template-columns: 48px 1fr 50px;
+        gap: 9px;
+
+        &__icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        &__progress {
+            width: 50px;
+            height: 50px;
+
+            &::before {
+                width: 38px;
+                height: 38px;
+            }
+        }
+        &__information {
+            strong {
+                font-size: 0.82rem;
+            }
+        }
+
+        &__change {
+            font-size: 0.64rem;
+        }
+    }
+}
+//statistic card component end
+
+//statistics chart component style start
+.statistics-chart {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    overflow: visible;
+
+    line {
+        stroke: rgba(248, 248, 248, 0.28);
+        stroke-width: 1;
+    }
+
+    &__area {
+        opacity: 0.32;
+    }
+
+    &__line {
+       fill: none;
+       stroke: $color-accent;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       stroke-width: 5;
+    }
+
+    &__point {
+        fill: $color-accent;
+        stroke: $color-background-font;
+        stroke-width: 5;
+    }
+}
+//statistic chart component style endd
+
+//settings page style starrt 
+.settings {
+    flex: 1;
+    padding: 8px 36px 24px;
+    overflow-y: auto;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; 
+    }
+
+    &__item {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 8px;
+        color: $color-background-font;
+        font-size: 1.15rem;
+        text-align: left;
+        background-color: transparent;
+        cursor: default;
+        opacity: 1;
+    }
+
+    &__arrow {
+        width: 13px;
+        height: 13px;
+        border-top: 2px solid $color-background-font;
+        border-right: 2px solid $color-background-font;
+        flex-shrink: 0;
+        transform: rotate(45deg);
+    }
+
+    @media (max-width: 360px) {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
  

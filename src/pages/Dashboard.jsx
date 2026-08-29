@@ -1,16 +1,13 @@
+ //Displays workout cards, daily activities, the application header, and bottom navigation
+
 import Header from "../components/Header";
 import BottomMenu from "../components/BottomMenu";
-import WorkoutCard from "../components/WorkoutCard";
+import WorkoutList from "../components/WorkoutList";
 
-import fitnessIcon from "../assets/icons/fitness.svg";
 import runningIcon from "../assets/icons/running.svg";
 import hiitIcon from "../assets/icons/hiit.svg";
 
-function Dashboard({ onNavigation }) {
-  function openFitnessPage() {
-    onNavigation("fitness");
-  }
-
+function Dashboard({ workoutCards, bottomMenuItems }) {
   return (
     <div className="app-shell">
       <Header />
@@ -19,27 +16,7 @@ function Dashboard({ onNavigation }) {
         <h1 className="visually-hidden">Dashboard</h1>
 
         <section className="dashboard__workouts" aria-label="Trenning">
-          <WorkoutCard
-            icon={fitnessIcon}
-            title="Fitness"
-            badge="8+"
-            isActive={true}
-            onClick={openFitnessPage}
-          />
-
-          <WorkoutCard
-            icon={runningIcon}
-            title="Running"
-            badge="3+"
-            isActive={false}
-          />
-
-          <WorkoutCard
-            icon={hiitIcon}
-            title="Hiit"
-            badge="4+"
-            isActive={false}
-          />
+          <WorkoutList cards={workoutCards} />
 
           <button
             className="dashboard__add-button"
@@ -82,7 +59,7 @@ function Dashboard({ onNavigation }) {
         </section>
       </main>
 
-      <BottomMenu activeItem="home" onNavigation={onNavigation} />
+      <BottomMenu items={bottomMenuItems} />
     </div>
   );
 }

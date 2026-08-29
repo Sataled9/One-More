@@ -1,3 +1,5 @@
+//Displays the One More logo, an optional page title, and an optional back navigation button
+
 import logo from "../assets/logo/one-more-logo.png";
 import arrowLeft from "../assets/icons/arrow-left.svg";
 

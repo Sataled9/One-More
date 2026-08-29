@@ -1,21 +1,8 @@
-function Timer() {
-  const today = new Date();
-  const currentDay = today.getDate();
+//Presentation component for displaying the program countdown
 
-//Gets total number of days in the current month
-  const totalDaysInMonth = new Date(
-    today.getFullYear(),
-    today.getMonth() + 1,
-    0,
-  ).getDate();
-
-    const daysRemaining = totalDaysInMonth - currentDay +1;
-
-//Calculates how much of the month has passed for progress bar
-    const progressPercentage = (currentDay / totalDaysInMonth) * 100;
-
+function Timer({ daysRemaining, progressPercentage }) {
     return (
-        <section calssName="program-timer" aria-label="Program countdown">
+        <section className="program-timer" aria-label="Program countdown">
             <div className="program-timer__text">
                 <p className="program-timer__title">Program change</p>
                 <p className="program-timer__value">{daysRemaining} days remaining</p>

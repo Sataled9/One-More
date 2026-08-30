@@ -1,17 +1,13 @@
 import Header from "../components/Header";
 import BottomMenu from "../components/BottomMenu";
 
-function Settings({ onNavigation }) {
-    function goBackToStatistics() {
-        onNavigation("statistics");
-    }
-
+function Settings({ goBack, bottomMenuItems }) {
     return (
         <div className="app-shell">
             <Header 
                 title="Settings"
                 showBackArrow={true}
-                onBack={goBackToStatistics}
+                onBack={goBack}
             />
 
             <main className="settings">
@@ -50,7 +46,7 @@ function Settings({ onNavigation }) {
                 </section>
             </main>
 
-            <BottomMenu activeItem="settings" onNavigation={onNavigation} />
+            <BottomMenu items={bottomMenuItems} />
         </div>
     );
 }

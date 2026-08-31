@@ -28,8 +28,9 @@ import absPlankGif from "../assets/gifs/abs-plank.gif";
 
 const API_URL = "http://localhost:3000";
 
+//Connects every GIF in database to its imported file
 const exerciseGifs = {
-    "dumbbell-svend-press.gif": svendPressGif,
+  "dumbbell-svend-press.gif": svendPressGif,
   "dumbbell-fly.gif": dumbbellFlyGif,
   "flat-dumbbell-press.gif": flatDumbbellPressGif,
   "reverse-grip-press.gif": reverseGripPressGif,
@@ -56,7 +57,7 @@ const exerciseGifs = {
   "abs-plank.gif": absPlankGif,
 };
 
-
+//Organizes muscle groups using the program ID
 function preparePrograms(programs) {
     const preparedPrograms = {};
 
@@ -67,20 +68,23 @@ function preparePrograms(programs) {
     return preparedPrograms;
 }
 
+//Adds correct GIF file to every exercise
 function prepareExercises(exercises) {
     return exercises.map((exercise) => ({
         ...exercise,
-        gir: exerciseGifs[exercise.gif],
+        gif: exerciseGifs[exercise.gif],
     }));
 }
 
+//Loads initial data directly from dbjson
 function getInitialWorkoutData() {
     return {
-        program: preparePrograms(database.programs),
+        programs: preparePrograms(database.programs),
         exercises: prepareExercises(database.exercises),
     };
 }
 
+// Loads data from Api OR uses db.json if the request fails
 async function getWorkoutData() {
     try {
         const programResponse = await fetch(`${API_URL}/programs`);

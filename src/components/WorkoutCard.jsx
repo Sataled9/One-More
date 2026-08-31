@@ -1,15 +1,11 @@
-// Active cards are selectable; inactive cards remain visible but disabled
-function WorkoutCard({ icon, title, badge, isActive, onClick }) {
-  const cardClassName = isActive
-    ? "workout-card workout-card--active"
-    : "workout-card workout-card--inactive";
-
+//Displays workout card using data prepared by the controller
+function WorkoutCard({ icon, title, badge, className, disabled, ariaLabel, onClick }) {
   return (
     <button
-      className={cardClassName}
+      className={className}
       type="button"
-      disabled={!isActive}
-      aria-label={`${title}, ${isActive ? "active" : "inactive"}`}
+      disabled={disabled}
+      aria-label={ariaLabel}
       onClick={onClick}
     >
       <span className="workout-card__icon">

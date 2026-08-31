@@ -1,32 +1,10 @@
-//Switch between the existing pages
-import { useState } from "react";
-import Dashboard from "./pages/Dashboard"; 
-import Fitness from "./pages/Fitness";
-import Statistics from "./pages/Statistics";
-import Settings from "./pages/Settings";    
-
-
-
-//all pages are stored here for bottom menu
-const pages = {
-    dashboard: Dashboard,
-     fitness: Fitness,
-    statistics: Statistics,
-    settings: Settings,
-}; 
-
+import useAppController from "./logic/AppController";
 
 function App() {
-    const [currentPage, setCurrentPage] = useState("dashboard");
-    const CurrentPage = pages[currentPage]; 
+  const { CurrentPage, pageProps } = useAppController();
 
-//cchanges the current page when the user selects a different page
- function navigateToPage(pageName) {
-    if (pages[pageName]) {
-        setCurrentPage(pageName)
-    }
-} 
+  return <CurrentPage {...pageProps} />
 
- return <CurrentPage onNavigation={navigateToPage} />;
 }
-export default App; 
+
+export default App;

@@ -1,3 +1,4 @@
+//Returns workout data for selected day and muscle grop
 function getCurrentWorkout(
   dayId,
   muscleGroup,
@@ -5,7 +6,10 @@ function getCurrentWorkout(
   programs,
   exercises,
 ) {
-  const activeDay = workoutDays.find((day) => day.id === dayId);
+//Select workout day
+  const activeDay = workoutDays.find(
+    (day) => day.id === dayId,
+  );
 
   if (!activeDay || activeDay.programId === null) {
     return null;
@@ -18,10 +22,14 @@ function getCurrentWorkout(
     return null;
   }
 
-  const activeMuscleGroup = activeMuscleGroups.includes(muscleGroup)
+//Uses first muscle group when selected one is unavailable
+  const activeMuscleGroup = activeMuscleGroups.includes(
+    muscleGroup,
+  )
     ? muscleGroup
     : activeMuscleGroups[0];
 
+//Filters exercises by program and muscle group
   const visibleExercises = exercises.filter(
     (exercise) =>
       exercise.programId === activeProgramId &&

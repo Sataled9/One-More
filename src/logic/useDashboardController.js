@@ -2,7 +2,7 @@ import fitnessIcon from "../assets/icons/fitness.svg";
 import runningIcon from "../assets/icons/running.svg";
 import hiitIcon from "../assets/icons/hiit.svg";
 
-import { getWorkoutCardPresentation } from "./PresentationHelpers";
+import { getWorkoutCardPresentation } from "./presentationHelpers";
 
 //Manages workout cards displayed on Dashboard
 function DashboardController(onNavigation) {

@@ -1,4 +1,4 @@
-import useAppController from "./logic/AppController";
+import useAppController from "./logic/useAppController";
 
 function App() {
   const { CurrentPage, pageProps } = useAppController();

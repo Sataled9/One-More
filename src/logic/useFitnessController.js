@@ -11,18 +11,18 @@ import forearmsIcon from "../assets/icons/forearms.png";
 import alternatePrograms, {
   createWorkoutDays,
   getInitialWorkoutDay,
-} from "./AlternatePrograms";
+} from "./alternatePrograms";
 
-import getCurrentWorkout from "./CurrentWorkout";
-import getProgramTimer from "./ProgramTimer";
+import getCurrentWorkout from "./currentWorkout";
+import getProgramTimer from "./programTimer";
 
 import {
   getDateCardClassName,
   getExerciseDetails,
   getMuscleCardClassName,
-} from "./PresentationHelpers";
+} from "./presentationHelpers";
 
-import { getInitialWorkoutData } from "./WorkoutService";
+import { getInitialWorkoutData } from "./workoutService";
 
 const muscleIcons = {
   Chest: chestIcon,

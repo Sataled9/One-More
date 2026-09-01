@@ -5,13 +5,13 @@ import Fitness from "../pages/Fitness";
 import Statistics from "../pages/Statistics";
 import Settings from "../pages/Settings";
 
-import { getBottomMenuItems } from "./PresentationHelpers";
+import { getBottomMenuItems } from "./presentationHelpers";
 
-import useDashboardController from "./DashboardController";
-import useFitnessController from "./FitnessController";
-import usePageController from "./PageController";
+import useDashboardController from "./useDashboardController";
+import useFitnessController from "./useFitnessController";
+import usePageController from "./usePageController";
 
-// Main controller for application navigation
+//Main controller for application navigation
 function useAppController() {
   const [currentPage, setCurrentPage] = useState("dashboard");
 

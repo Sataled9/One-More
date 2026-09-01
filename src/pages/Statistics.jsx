@@ -5,7 +5,7 @@ function Statistics({ goBack, bottomMenuItems }) {
   return (
     <div className="app-shell">
       <Header
-        title="Statistic"
+        title="Statistics"
         showBackArrow={true}
         onBack={goBack}
       />

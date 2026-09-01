@@ -1,7 +1,7 @@
 //Manages navigation back to the previous page
-function usePageController(onNavigation, previusPage) {
+function usePageController(onNavigation, previousPage) {
     function goBack() {
-        onNavigation(previusPage);
+        onNavigation(previousPage);
     }
 
     return { goBack };

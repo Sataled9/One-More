@@ -90,3 +90,49 @@ The goal is to create one connected platform where training, nutrition, recovery
 ---
 
 **One More — One platform. Every activity. Keep moving.**
+
+# Run the Project Locally
+
+Follow these steps to download and run One More on your computer.
+
+# Requirements
+
+Before starting, make sure you have installed:
+
+Node.js version 18 or newer: https://nodejs.org/
+npm (included with Node.js)
+Git: https://git-scm.com/
+
+1. Download the Project
+
+You can clone the repository using Git:
+
+# git clone <repository-url>
+
+Then enter the project folder:
+
+# cd One-More
+
+Alternatively, download the project directly from GitHub by selecting:
+
+# Code → Download ZIP
+
+Extract the downloaded ZIP file and open the extracted project folder in a terminal.
+
+2. Install Dependencies
+
+Inside the project folder, run:
+
+# npm install
+
+This command installs all dependencies required by the application.
+
+3. Start the Application
+
+# Run: npm run dev
+
+Vite will start the local development server and display a local address in the terminal, usually:
+
+# http://localhost:5173
+
+Open this address in your web browser to view One More locally.

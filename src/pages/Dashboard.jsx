@@ -15,7 +15,7 @@ function Dashboard({ workoutCards, bottomMenuItems }) {
       <main className="dashboard">
         <h1 className="visually-hidden">Dashboard</h1>
 
-        <section className="dashboard__workouts" aria-label="Trenning">
+        <section className="dashboard__workouts" aria-label="Training">
           <WorkoutList cards={workoutCards} />
 
           <button

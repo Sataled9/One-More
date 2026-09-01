@@ -8,7 +8,7 @@ function WorkoutList({ cards }) {
               key={card.id}
               icon={card.icon}
               title={card.title}
-              badge={card.bedge}
+              badge={card.badge}
               className={card.className}
               disabled={card.disabled}
               ariaLabel={card.ariaLabel}

@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Running",
       "badge": "3+",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 3,
@@ -22,7 +22,8 @@
   "programs": [
     {
       "id": 1,
-      "name": "Day A",
+      "name": "Section A",
+      "trainingProgram": "Strength Foundation",
       "days": [
         "Monday",
         "Friday"
@@ -36,13 +37,43 @@
     },
     {
       "id": 2,
-      "name": "Day B",
+      "name": "Section B",
+      "trainingProgram": "Strength Foundation",
       "days": [
         "Wednesday"
       ],
       "muscleGroups": [
         "Biceps",
         "Back",
+        "Forearms",
+        "Abs"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Section C",
+      "trainingProgram": "Strength Progression",
+      "days": [
+        "Monday",
+        "Friday"
+      ],
+      "muscleGroups": [
+        "Chest",
+        "Shoulders",
+        "Triceps",
+        "Abs"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Section D",
+      "trainingProgram": "Strength Progression",
+      "days": [
+        "Wednesday"
+      ],
+      "muscleGroups": [
+        "Back",
+        "Biceps",
         "Forearms",
         "Abs"
       ]
@@ -74,14 +105,84 @@
     { "id": 23, "programId": 2, "muscleGroup": "Forearms", "name": "Palms-up Wrist Curl", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "palms-up-wrist-curl.gif" },
     { "id": 24, "programId": 2, "muscleGroup": "Forearms", "name": "Reverse Wrist Curl", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "reverse-wrist-curl.gif" },
     { "id": 25, "programId": 2, "muscleGroup": "Forearms", "name": "Wrist Extension", "sets": 2, "repetitions": 16, "weight": "10-15 kg", "gif": "wrist-extension.gif" },
-    { "id": 26, "programId": 2, "muscleGroup": "Abs", "name": "Abs Plank", "sets": 1, "durationSeconds": 120, "weight": "Bodyweight", "gif": "abs-plank.gif" }
+    { "id": 26, "programId": 2, "muscleGroup": "Abs", "name": "Abs Plank", "sets": 1, "durationSeconds": 120, "weight": "Bodyweight", "gif": "abs-plank.gif" },
+    { "id": 27, "programId": 3, "muscleGroup": "Chest", "name": "Incline Dumbbell Press", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "incline-dumbbell-press.gif" },
+    { "id": 28, "programId": 3, "muscleGroup": "Chest", "name": "Dumbbell Pullover", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "dumbbell-pullover.gif" },
+    { "id": 29, "programId": 3, "muscleGroup": "Chest", "name": "Incline Dumbbell Fly", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "incline-dumbbell-fly.gif" },
+    { "id": 30, "programId": 3, "muscleGroup": "Chest", "name": "Dumbbell Floor Press", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "dumbbell-floor-press.gif" },
+    { "id": 31, "programId": 3, "muscleGroup": "Shoulders", "name": "Arnold Press", "sets": 3, "repetitions": 12, "weight": "6 kg", "gif": "arnold-press.gif" },
+    { "id": 32, "programId": 3, "muscleGroup": "Shoulders", "name": "Seated Dumbbell Shoulder Press", "sets": 3, "repetitions": 12, "weight": "6 kg", "gif": "seated-dumbbell-shoulder-press.gif" },
+    { "id": 33, "programId": 3, "muscleGroup": "Shoulders", "name": "Dumbbell Lateral Raise", "sets": 3, "repetitions": 12, "weight": "6 kg", "gif": "dumbbell-lateral-raise.gif" },
+    { "id": 34, "programId": 3, "muscleGroup": "Shoulders", "name": "Bent Over Reverse Fly", "sets": 3, "repetitions": 12, "weight": "6 kg", "gif": "bent-over-reverse-fly.gif" },
+    { "id": 35, "programId": 3, "muscleGroup": "Triceps", "name": "Close Grip Dumbbell Press", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "close-grip-dumbbell-press.gif" },
+    { "id": 36, "programId": 3, "muscleGroup": "Triceps", "name": "Single Arm Overhead Triceps Extension", "sets": 3, "repetitions": 12, "weight": "6 kg", "gif": "single-arm-triceps-extension.gif" },
+    { "id": 37, "programId": 3, "muscleGroup": "Triceps", "name": "Dumbbell Tate Press", "sets": 3, "repetitions": 12, "weight": "8 kg", "gif": "dumbbell-tate-press.gif" },
+    { "id": 38, "programId": 3, "muscleGroup": "Triceps", "name": "Diamond Push-Up", "sets": 3, "repetitions": 12, "weight": "Bodyweight", "gif": "diamond-push-up.gif" },
+    { "id": 39, "programId": 3, "muscleGroup": "Abs", "name": "Weighted Russian Twist", "sets": 3, "repetitions": 20, "weight": "5 kg", "gif": "weighted-russian-twist.gif" },
+    { "id": 40, "programId": 4, "muscleGroup": "Back", "name": "One Arm Dumbbell Row", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "one-arm-dumbbell-row.gif" },
+    { "id": 41, "programId": 4, "muscleGroup": "Back", "name": "Renegade Row", "sets": 3, "repetitions": 12, "weight": "10 kg", "gif": "renegade-row.gif" },
+    { "id": 42, "programId": 4, "muscleGroup": "Back", "name": "Dumbbell Romanian Deadlift", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "dumbbell-romanian-deadlift.gif" },
+    { "id": 43, "programId": 4, "muscleGroup": "Back", "name": "Chest Supported Dumbbell Row", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "chest-supported-dumbbell-row.gif" },
+    { "id": 44, "programId": 4, "muscleGroup": "Biceps", "name": "Zottman Curl", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "zottman-curl.gif" },
+    { "id": 45, "programId": 4, "muscleGroup": "Biceps", "name": "Incline Dumbbell Curl", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "incline-dumbbell-curl.gif" },
+    { "id": 46, "programId": 4, "muscleGroup": "Biceps", "name": "Cross Body Hammer Curl", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "cross-body-hammer-curl.gif" },
+    { "id": 47, "programId": 4, "muscleGroup": "Biceps", "name": "Dumbbell Drag Curl", "sets": 3, "repetitions": 12, "weight": "12 kg", "gif": "dumbbell-drag-curl.gif" },
+    { "id": 48, "programId": 4, "muscleGroup": "Forearms", "name": "Seated Dumbbell Wrist Curl", "sets": 3, "repetitions": 15, "weight": "10-15 kg", "gif": "seated-dumbbell-wrist-curl.gif" },
+    { "id": 49, "programId": 4, "muscleGroup": "Forearms", "name": "Dumbbell Reverse Curl", "sets": 3, "repetitions": 15, "weight": "10-15 kg", "gif": "dumbbell-reverse-curl.gif" },
+    { "id": 50, "programId": 4, "muscleGroup": "Forearms", "name": "Dumbbell Pronation and Supination", "sets": 3, "repetitions": 15, "weight": "10-15 kg", "gif": "dumbbell-pronation-supination.gif" },
+    { "id": 51, "programId": 4, "muscleGroup": "Forearms", "name": "Farmer's Carry", "sets": 3, "durationSeconds": 60, "weight": "15-20 kg", "gif": "farmers-carry.gif" },
+    { "id": 52, "programId": 4, "muscleGroup": "Abs", "name": "Dumbbell Dead Bug", "sets": 3, "repetitions": 16, "weight": "5 kg", "gif": "dumbbell-dead-bug.gif" }
   ],
-  "runningSessions": [{
-    "id": 1,
-    "day": "Fast Running",
-    "distanceKm": 10
-  }
-],
+  "runningPrograms": [
+    {
+      "id": 1,
+      "name": "Running A",
+      "durationDays": 7
+    },
+    {
+      "id": 2,
+      "name": "Running B",
+      "durationDays": 7
+    }
+  ],
+  "runningSessions": [
+    { "id": 1, "programId": 1, "weekDay": 2, "day": "Tuesday", "runType": "Fast Running", "distanceKm": 15, "targetTime": "1:20", "warmupId": 1 },
+    { "id": 2, "programId": 1, "weekDay": 4, "day": "Thursday", "runType": "Slow Running", "distanceKm": 15, "targetTime": "1:36", "warmupId": 2 },
+    { "id": 3, "programId": 1, "weekDay": 6, "day": "Saturday", "runType": "Fast Running", "distanceKm": 15, "targetTime": "1:20", "warmupId": 1 },
+    { "id": 4, "programId": 2, "weekDay": 2, "day": "Tuesday", "runType": "Slow Running", "distanceKm": 15, "targetTime": "1:36", "warmupId": 2 },
+    { "id": 5, "programId": 2, "weekDay": 4, "day": "Thursday", "runType": "Fast Running", "distanceKm": 15, "targetTime": "1:20", "warmupId": 1 },
+    { "id": 6, "programId": 2, "weekDay": 6, "day": "Saturday", "runType": "Slow Running", "distanceKm": 25, "targetTime": null, "warmupId": 2 }
+  ],
+  "runningWarmups": [
+    {
+      "id": 1,
+      "name": "Fast Warm-up",
+      "durationMinutes": 5,
+      "workSeconds": 20,
+      "restSeconds": 10,
+      "rounds": 10,
+      "exercises": [
+        { "id": "fast-1", "name": "High Knees", "gif": "fast-running-warmup.gif" },
+        { "id": "fast-2", "name": "Butt Kicks", "gif": "fast-running-butt-kicks.gif" },
+        { "id": "fast-3", "name": "Jumping Jacks", "gif": "fast-running-jumping-jacks.gif" },
+        { "id": "fast-4", "name": "Mountain Climbers", "gif": "fast-running-mountain-climbers.gif" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Slow Warm-up",
+      "durationMinutes": 5,
+      "workSeconds": 20,
+      "restSeconds": 10,
+      "rounds": 10,
+      "exercises": [
+        { "id": "slow-1", "name": "Step Jacks", "gif": "slow-running-warmup.gif" },
+        { "id": "slow-2", "name": "March in Place", "gif": "slow-running-march-in-place.gif" },
+        { "id": "slow-3", "name": "Knee Raises", "gif": "slow-running-knee-raises.gif" },
+        { "id": "slow-4", "name": "Leg Swings", "gif": "slow-running-leg-swings.gif" }
+      ]
+    }
+  ],
 "hiitSessions": [{
   "id": 1,
   "day": "Tuesday",
@@ -91,43 +192,47 @@
   "restSeconds": 60
   }
  ],
- "statistics": [{
-  "id": 1,
-  "name": "Weight loss",
-  "value": 7.4,
-  "unit": "kg",
-  "changePercent": 4.4,
-  "progressPercent": 66
- },
- {
-  "id": 2,
-  "name": "Calories",
-  "value": 42.24,
-  "unit": "Kcal",
-  "changePercent": 1.7,
-  "progressPercent": 24
- },
- {
-  "id": 3,
-  "name": "Stamina",
-  "value": 24.2,
-  "unit": "bpm",
-  "changePercent": -0.4,
-  "progressPercent": 51
- }
-],
-  "weeklyStatistics": [
+  "activityHistory": [
     {
       "id": 1,
-      "totalCalories": 1745,
-      "highlightedCalories": 1578
+      "date": "2026-09-07",
+      "type": "fitness",
+      "programId": 1,
+      "programName": "Strength Foundation - Section A",
+      "completedExercises": 13
+    },
+    {
+      "id": 2,
+      "date": "2026-09-08",
+      "type": "running",
+      "programId": 2,
+      "programName": "Running B",
+      "sessionId": 4,
+      "runType": "Slow Running",
+      "distanceKm": 15,
+      "completedExercises": 4
+    },
+    {
+      "id": 3,
+      "date": "2026-09-09",
+      "type": "fitness",
+      "programId": 2,
+      "programName": "Strength Foundation - Section B",
+      "completedExercises": 13
     }
   ],
-  "programTimers": [
+  "settings": [
     {
       "id": 1,
-      "durationDays": 60,
-      "daysRemaining": 60
+      "name": "",
+      "weight": "",
+      "weeklyWorkoutGoal": 6,
+      "weeklyRunningGoalKm": 45,
+      "fitnessStartDate": "2026-08-01",
+      "runningStartDate": "2026-08-01",
+      "notificationsEnabled": false,
+      "notificationTime": "18:00",
+      "workoutDaysOnly": true
     }
   ]
 }

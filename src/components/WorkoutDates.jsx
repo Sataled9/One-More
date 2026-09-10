@@ -1,5 +1,4 @@
 //Presentation component for displaying workout days
-
 function WorkoutDates({ cards }) {
   return (
     <section className="fitness__dates" aria-label="Workout dates">

@@ -15,6 +15,7 @@ function Fitness({
   exerciseCards,
   goBackToDashboard,
   muscleCards,
+  programName,
   timer,
 }) {
   return (
@@ -39,6 +40,7 @@ function Fitness({
         <Timer
           daysRemaining={timer.daysRemaining}
           progressPercentage={timer.progressPercentage}
+          title={programName}
         />
       </main>
 

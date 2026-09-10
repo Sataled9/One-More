@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import chestIcon from "../assets/icons/chest.png";
 import shouldersIcon from "../assets/icons/shoulders.png";
@@ -22,7 +22,10 @@ import {
   getMuscleCardClassName,
 } from "./presentationHelpers";
 
-import { getInitialWorkoutData } from "./workoutService";
+import {
+  getInitialWorkoutData,
+  getWorkoutData,
+} from "./workoutService";
 
 const muscleIcons = {
   Chest: chestIcon,
@@ -34,20 +37,50 @@ const muscleIcons = {
   Forearms: forearmsIcon,
 };
 
-const workoutDays = createWorkoutDays();
+const programNames = {
+  1: "Strength Foundation - Section A",
+  2: "Strength Foundation - Section B",
+  3: "Strength Progression - Section C",
+  4: "Strength Progression - Section D",
+};
 
-const { programs, exercises } = getInitialWorkoutData();
+const initialWorkoutData = getInitialWorkoutData();
 
-const initialWorkoutDay = getInitialWorkoutDay(workoutDays);
+const initialPrograms = initialWorkoutData.programs;
+const initialExercises = initialWorkoutData.exercises;
+
+const initialTimer = getProgramTimer();
+const initialWorkoutDays = createWorkoutDays(
+  new Date(),
+  initialTimer.activeCycle,
+);
+const initialWorkoutDay = getInitialWorkoutDay(initialWorkoutDays);
 
 const initialProgram = alternatePrograms(
   initialWorkoutDay,
-  programs,
-  exercises,
+  initialPrograms,
+  initialExercises,
 );
 
 //Stores theworkout day
-function useFitnessController(onNavigation) {
+function useFitnessController(
+  onNavigation,
+  settings,
+  saveActivity,
+  activities,
+) {
+  const timer = getProgramTimer(
+    new Date(),
+    settings.fitnessStartDate,
+  );
+  const workoutDays = createWorkoutDays(
+    new Date(),
+    timer.activeCycle,
+  );
+  const [programs, setPrograms] = useState(initialPrograms);
+
+  const [exercises, setExercises] = useState(initialExercises);
+
   const [activeDayId, setActiveDayId] = useState(
     initialProgram.activeDayId,
   );
@@ -65,6 +98,35 @@ function useFitnessController(onNavigation) {
 //Stores completed exercise ID
   const [completedExerciseIds, setCompletedExerciseIds] =
     useState([]);
+  const [savedWorkoutKeys, setSavedWorkoutKeys] = useState([]);
+
+  // Clears completed exercises after a full progress reset
+  function resetFitnessProgress() {
+    setCompletedExerciseIds([]);
+    setSavedWorkoutKeys([]);
+  }
+
+//Loads the latest workout data from json-server
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadWorkoutData() {
+      const workoutData = await getWorkoutData();
+
+      if (!isMounted) {
+        return;
+      }
+
+      setPrograms(workoutData.programs);
+      setExercises(workoutData.exercises);
+    }
+
+    loadWorkoutData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const currentWorkout = getCurrentWorkout(
     activeDayId,
@@ -137,6 +199,35 @@ function useFitnessController(onNavigation) {
 //Stops when an exercise is unchecked
     if (isAlreadyCompleted) {
       return;
+    }
+
+    const programExercises = exercises.filter(
+      (exercise) =>
+        exercise.programId === currentWorkout.activeProgramId,
+    );
+    const workoutKey = `${activeDayId}-${currentWorkout.activeProgramId}`;
+    const wholeWorkoutCompleted = programExercises.every(
+      (exercise) => updatedCompletedIds.includes(exercise.id),
+    );
+
+    if (
+      wholeWorkoutCompleted &&
+      !savedWorkoutKeys.includes(workoutKey) &&
+      !activities.some(
+        (activity) =>
+          activity.type === "fitness" &&
+          activity.date === activeDayId &&
+          activity.programId === currentWorkout.activeProgramId,
+      )
+    ) {
+      saveActivity({
+        date: activeDayId,
+        type: "fitness",
+        programId: currentWorkout.activeProgramId,
+        programName: programNames[currentWorkout.activeProgramId],
+        completedExercises: programExercises.length,
+      });
+      setSavedWorkoutKeys([...savedWorkoutKeys, workoutKey]);
     }
 
     const allExercisesCompleted =
@@ -245,6 +336,8 @@ function useFitnessController(onNavigation) {
       (exercise) => ({
         ...exercise,
 
+        weight: exercise.weight,
+
         details:
           getExerciseDetails(exercise),
 
@@ -276,11 +369,19 @@ function useFitnessController(onNavigation) {
 
     exerciseCards,
 
+
     goBackToDashboard,
 
     muscleCards,
 
-    timer: getProgramTimer(),
+
+    programName:
+      programNames[currentWorkout.activeProgramId],
+
+    resetFitnessProgress,
+
+    timer,
+
   };
 }
 

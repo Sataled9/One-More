@@ -1,5 +1,4 @@
 //Presentation component for displaying workout cards
-
 import WorkoutCard from "./WorkoutCard";
 
 function WorkoutList({ cards }) {

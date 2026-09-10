@@ -1,15 +1,10 @@
-# ONE MORE -Fitness App
-One More is a responsive workout-tracking application designed to help users organize their training, record results and monitor their progress.
-The first development phase focuses on fitness workouts. Additional sports will be introduced through future updates.
+# ONE MORE - Fitness App
 
-## Current Status
-The application is currently under development.
-The first version will include the Fitness section and its core workout-management features.
+One More is a responsive multi-sport fitness, training, nutrition, and performance application designed to bring different aspects of an active lifestyle into a single ecosystem.
 
-# One More
-Is a multi-sport fitness, training, nutrition, and performance application designed to bring different aspects of an active lifestyle into a single ecosystem.
+The application allows different types of training to be organized, performed, recorded, and analyzed within the same environment.
 
-The project is being developed progressively, starting with its core architecture, interface, training system, and data management. The long-term objective is to create a complete application for **iOS and Android**, supported by a real backend and server infrastructure.
+The current development focuses primarily on the core application structure, Fitness and Running, while additional activities and features will be progressively introduced.
 
 ## Core Sports & Activities
 
@@ -20,119 +15,264 @@ One More is designed to support multiple sports and training disciplines:
 * HIIT
 * Cycling
 * Swimming
-* And More
+* And More...
 
-Rather than creating separate applications for each activity, One More is intended to provide a unified environment where different types of training can be planned, performed, recorded, and analyzed.
+Rather than creating separate applications for each activity, One More provides a unified environment where different types of training can work together.
 
 ## Fitness
-The Fitness section is one of the core parts of One More.
 
-It provides structured workout days, muscle groups, exercises, sets, repetitions, weights, workout progression, exercise completion, and detailed training-related information.
-Training programs are designed around 8-week training cycles. At the end of each cycle, the application will analyze the user's progress and collected performance data to determine how the next training program should be adapted.
-An integrated Artificial Intelligence system will use the information accumulated throughout the training cycle to help generate and adjust the next program according to the user's actual performance, progression, recovery, and training history.
-One More will also integrate data collected from compatible smartwatches and fitness wearables, including devices and ecosystems such as Garmin, Apple Watch, and other supported platforms. This will provide the AI with additional information such as heart rate, training load, recovery, sleep, activity, workout performance, and other available physiological and training metrics.
+The Fitness section provides structured workout programs divided into training days, muscle groups and exercises.
 
-By combining workout data recorded directly in One More with information obtained from connected wearable devices, the system will be able to build a more complete picture of the user's training condition.
-After each 8-week cycle, this information can therefore be used to intelligently adapt variables such as training volume, intensity, exercises, sets, repetitions, recovery requirements, and overall workout structure.
-The long-term objective is for One More to move beyond static workout programs and provide adaptive training programs that evolve together with the athlete, using both training history and real-world data collected from connected devices.
+Users can select workout days, navigate between muscle groups, view exercises and their previews, check sets, repetitions and weights, and mark exercises as completed.
+
+Training programs are organized around 8-week cycles. The application manages workout progression and records completed activities.
+
+Future development will expand Fitness with training history, personal records, progression analysis, training volume, recovery information and AI-assisted program adaptation.
 
 ## Running
-The Running section will track distance, pace, heart rate, training load, recovery, and performance. Data from **Garmin, Apple Watch, and other compatible devices** will allow AI to analyze progress and adapt future training to the athlete.
+
+The Running section provides structured running programs and scheduled training sessions.
+
+Users can select running days, view session information, navigate through warm-up exercises and record completed running activities.
+
+Running programs are organized into training cycles and allow different types of sessions to be managed within the same application.
+
+Future development will include more detailed information about distance, pace, heart rate, training load, recovery and performance, together with wearable integration and AI-assisted program adaptation.
 
 ## HIIT
-The HIIT section will manage intervals, intensity, duration, recovery, and performance. **AI and wearable data** will help adapt sessions according to fitness level, progression, and recovery.
+
+The HIIT section is designed to manage high-intensity interval training within the One More ecosystem.
+
+It will organize training sessions according to exercises, intervals, intensity, duration and recovery periods.
+
+Completed HIIT activities will contribute to the same training history and statistics used by the other disciplines.
+
+Future development will include detailed session management, performance tracking, recovery information and integration with wearable data.
 
 ## Cycling
-The Cycling section will track distance, speed, heart rate, training load, performance, and recovery. Data from **connected devices** will help AI analyze progress and adapt future cycling training.
+
+The Cycling section is designed to integrate cycling activities into the same training environment.
+
+It will track information such as distance, duration, speed, heart rate, training load, performance and recovery.
+
+Cycling activities will contribute to the athlete's overall activity history and statistics.
+
+Future development will include compatible wearable integration, detailed performance analysis and AI-assisted training adaptation.
 
 ## Swimming
-The Swimming section will track sessions, distance, intensity, performance, heart rate where available, and recovery. These data will contribute to the athlete's overall profile and help AI adapt future training.
+
+The Swimming section is designed to integrate swimming activities into the One More ecosystem.
+
+It will track sessions, distance, duration, intensity, performance, heart rate where available and recovery.
+
+Swimming activities will contribute to the overall training history together with the other supported disciplines.
+
+Future development will include more detailed performance analysis and integration with compatible devices.
 
 ## Fasting
-The Fasting section will track **fasting periods, eating windows, duration, and fasting history**. Fasting data will be analyzed together with training, nutrition, activity, and recovery to provide a more complete understanding of the athlete's condition and goals.
+
+The Fasting section will track fasting periods, eating windows, duration and fasting history.
+
+Fasting information will be analyzed together with training, nutrition, activity and recovery to provide a more complete overview of the athlete's routine and goals.
 
 ## Nutrition & Sports Diet
-Nutrition will be integrated directly with **training, recovery, goals, activity level, and physiological characteristics**.
-One More will take into account whether the athlete is **male or female**, considering relevant physiological differences when analyzing nutritional requirements, energy needs, recovery, and training demands.
-AI will combine this information with data from **Fitness, Running, HIIT, Cycling, Swimming, Fasting, and connected wearable devices** to support personalized sports nutrition and dietary planning.
-The objective is to create one connected system where **training, physiology, nutrition, fasting, recovery, and performance work together** rather than being managed separately.
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Nutrition will be integrated with training, recovery, goals, activity level and physiological characteristics.
 
-## Current Features & Future Development
-One More is being developed as a continuously evolving platform. The current application establishes the core structure, while future updates will progressively introduce more advanced features inspired by the capabilities available in leading fitness and sports applications.
+The objective is to combine nutritional information with data from Fitness, Running, HIIT, Cycling, Swimming, Fasting and compatible wearable devices.
+
+Future development will use this information to support personalized sports nutrition and dietary planning.
 
 ## Dashboard
-The Dashboard is the central hub of One More, providing quick access to activities, daily training, progress, and the main areas of the application.
-Future updates will expand it with daily activity summaries, training recommendations, recovery status, upcoming workouts, goals, achievements, health information, and personalized AI insights, with uniqe ux creating a dynamic overview of the athlete's current condition.
 
-## Fitness
-The Fitness section manages workout programs, training days, muscle groups, exercises, sets, repetitions, weights, and completed activities.
-It will progressively expand with custom exercises and workouts, training history, personal records, progression tracking, exercise instructions, rest timers, automatic progression, muscle-group analysis, training volume, intensity management, recovery information, and AI-generated adaptations.
-Combined with data from connected wearables, One More will be able to analyze performance and progressively adapt training programs to the athlete.
+The Dashboard is the central hub of One More.
+
+It provides access to the main training activities, daily training information and the different areas of the application.
+
+Future development will expand the Dashboard with activity summaries, training recommendations, recovery information, upcoming workouts, goals and personalized insights.
 
 ## Statistics
-The Statistics section provides a visual overview of training activity and progress.
-It will evolve into a more advanced analytics environment including weekly, monthly and yearly trends, workout history, training volume, intensity, personal records, performance progression, muscle-group distribution, recovery, training load, activity comparisons, and data collected from connected devices.
-AI will help transform these data into understandable insights rather than simply displaying numbers and charts.
+
+The Statistics section provides a visual overview of completed activities and training progress.
+
+Recorded activity data is used to display information about the user's training history.
+
+Future development will expand Statistics with weekly, monthly and yearly trends, training volume, intensity, personal records, performance progression, recovery and training load.
 
 ## Settings
-The Settings section will provide control over the One More experience and progressively expand as new functionality is introduced.
-It will include options for personal profile and goals, biological and physiological information, measurement units, training preferences, notifications, privacy, connected devices, wearable integrations, data synchronization, accessibility, application preferences, and AI personalization.
-As One More grows, Settings will become the central place for controlling how the application, connected devices, and intelligent features adapt to each athlete.
+
+The Settings section provides control over application and training-related options.
+
+Settings information is stored and retrieved through the local backend.
+
+Future development will expand this section with additional training preferences, connected devices, data synchronization and application personalization.
+
+## Technologies Used
+
+The project uses:
+
+* **React** – components, props, state, events and hooks
+* **JavaScript** – application logic and interactions
+* **Vite** – development environment and build tool
+* **Sass / SCSS** – modular styling
+* **json-server** – local backend simulation and data storage
+* **Fetch API** – communication with the backend
+* **Git** – version control
+* **GitHub** – repository management
+* **Responsive Design** – adaptation to different screen sizes
+
+## Project Structure
+
+The project is organized by separating components, pages, application logic, styles and backend data.
+
+```text
+src/
+├── assets/
+├── components/
+├── logic/
+├── pages/
+└── styles/
+
+database/
+└── db.json
+```
+
+The `components` folder contains reusable React interface components.
+
+The `pages` folder contains the main presentation pages.
+
+The `logic` folder contains controllers, services and helper functions responsible for application state, behavior and data management.
+
+The `styles` folder contains modular Sass/SCSS files.
+
+The `database/db.json` file contains the data used by the local backend.
+
+This structure keeps the application logic separated from the graphical interface.
+
+## React
+
+The application uses React components, `props`, state, events and hooks.
+
+`useState` is used to manage application state, while `useEffect` is used where data or application behavior must be synchronized.
+
+Data and functions are passed to presentation components through `props`.
+
+## Backend & json-server
+
+One More uses **json-server** to simulate a local backend.
+
+Application data is stored in:
+
+```text
+database/db.json
+```
+
+The application communicates with json-server through the **Fetch API**.
+
+The backend runs locally at:
+
+```text
+http://localhost:3000
+```
+
+## Sass & Responsive Design
+
+The application uses Sass/SCSS with a modular structure for styling.
+
+Responsive rules are used to adapt the interface, navigation and training elements to different screen sizes.
+
+## Git & GitHub
+
+Git is used for version control and GitHub for repository management.
+
+Development changes are tracked through commits, and `.gitignore` is used to exclude files and directories that should not be included in the repository.
+
+# Run the Project Locally
+
+## Requirements
+
+Before starting, make sure you have installed:
+
+* Node.js version 18 or newer: https://nodejs.org/
+* npm
+* Git: https://git-scm.com/
+
+## 1. Download the Project
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Enter the project folder:
+
+```bash
+cd One-More
+```
+
+Alternatively, download the project from GitHub using:
+
+**Code → Download ZIP**
+
+## 2. Install Dependencies
+
+Inside the project folder, run:
+
+```bash
+npm install
+```
+
+This installs all dependencies required by the application.
+
+## 3. Start the Backend
+
+Start json-server:
+
+```bash
+npm run server
+```
+
+The backend will run at:
+
+```text
+http://localhost:3000
+```
+
+Keep this terminal open.
+
+## 4. Start the Application
+
+Open a second terminal inside the project folder and run:
+
+```bash
+npm start
+```
+
+Vite will display the local application address, normally:
+
+```text
+http://localhost:5173
+```
+
+Both json-server and Vite must be running while using the application.
+
+## Current Features & Future Development
+
+One More is being developed as a continuously evolving platform.
+
+Future development will expand the existing training system with additional sports, advanced statistics, nutrition, fasting, wearable integration and AI-assisted training.
+
+Compatible devices are planned to include platforms such as Garmin and Apple Watch, allowing training, recovery and physiological data to contribute to performance analysis.
 
 ## Development Roadmap
-One More will continue to grow from its current web platform into a complete multi-platform sports ecosystem.
-Future development will focus on AI-powered training, advanced statistics, nutrition, fasting, wearable integration, and personalized performance analysis.
-The next major step will bring One More to iOS, followed by Android. Later versions will expand to smartwatches and sports watches, including Garmin, Apple Watch, and other compatible devices.
-The goal is to create one connected platform where training, nutrition, recovery, physiology, health, and performance work together and continuously adapt to the athlete.
+
+The long-term objective is to develop One More into a complete multi-platform sports ecosystem.
+
+The project is planned to expand from the current web application to **iOS**, followed by **Android**, and later to compatible smartwatches and sports watches.
+
+The goal is to create one connected platform where training, nutrition, recovery, activity and performance can work together.
 
 ---
 
 **One More — One platform. Every activity. Keep moving.**
-
-# Run the Project Locally
-
-Follow these steps to download and run One More on your computer.
-
-# Requirements
-
-Before starting, make sure you have installed:
-
-Node.js version 18 or newer: https://nodejs.org/
-npm (included with Node.js)
-Git: https://git-scm.com/
-
-1. Download the Project
-
-You can clone the repository using Git:
-
-# git clone <repository-url>
-
-Then enter the project folder:
-
-# cd One-More
-
-Alternatively, download the project directly from GitHub by selecting:
-
-# Code → Download ZIP
-
-Extract the downloaded ZIP file and open the extracted project folder in a terminal.
-
-2. Install Dependencies
-
-Inside the project folder, run:
-
-# npm install
-
-This command installs all dependencies required by the application.
-
-3. Start the Application
-
-# Run: npm run dev
-
-Vite will start the local development server and display a local address in the terminal, usually:
-
-# http://localhost:5173
-
-Open this address in your web browser to view One More locally.

@@ -25,6 +25,32 @@ import palmsUpWristCurlGif from "../assets/gifs/palms-up-wrist-curl.gif";
 import reverseWristCurlGif from "../assets/gifs/reverse-wrist-curl.gif";
 import wristExtensionGif from "../assets/gifs/wrist-extension.gif";
 import absPlankGif from "../assets/gifs/abs-plank.gif";
+import inclineDumbbellPressGif from "../assets/gifs/incline-dumbbell-press.gif";
+import dumbbellPulloverGif from "../assets/gifs/dumbbell-pullover.gif";
+import inclineDumbbellFlyGif from "../assets/gifs/incline-dumbbell-fly.gif";
+import dumbbellFloorPressGif from "../assets/gifs/dumbbell-floor-press.gif";
+import arnoldPressGif from "../assets/gifs/arnold-press.gif";
+import seatedDumbbellShoulderPressGif from "../assets/gifs/seated-dumbbell-shoulder-press.gif";
+import dumbbellLateralRaiseGif from "../assets/gifs/dumbbell-lateral-raise.gif";
+import bentOverReverseFlyGif from "../assets/gifs/bent-over-reverse-fly.gif";
+import closeGripDumbbellPressGif from "../assets/gifs/close-grip-dumbbell-press.gif";
+import singleArmTricepsExtensionGif from "../assets/gifs/single-arm-triceps-extension.gif";
+import dumbbellTatePressGif from "../assets/gifs/dumbbell-tate-press.gif";
+import diamondPushUpGif from "../assets/gifs/diamond-push-up.gif";
+import weightedRussianTwistGif from "../assets/gifs/weighted-russian-twist.gif";
+import oneArmDumbbellRowGif from "../assets/gifs/one-arm-dumbbell-row.gif";
+import renegadeRowGif from "../assets/gifs/renegade-row.gif";
+import dumbbellRomanianDeadliftGif from "../assets/gifs/dumbbell-romanian-deadlift.gif";
+import chestSupportedDumbbellRowGif from "../assets/gifs/chest-supported-dumbbell-row.gif";
+import zottmanCurlGif from "../assets/gifs/zottman-curl.gif";
+import inclineDumbbellCurlGif from "../assets/gifs/incline-dumbbell-curl.gif";
+import crossBodyHammerCurlGif from "../assets/gifs/cross-body-hammer-curl.gif";
+import dumbbellDragCurlGif from "../assets/gifs/dumbbell-drag-curl.gif";
+import seatedDumbbellWristCurlGif from "../assets/gifs/seated-dumbbell-wrist-curl.gif";
+import dumbbellReverseCurlGif from "../assets/gifs/dumbbell-reverse-curl.gif";
+import dumbbellPronationSupinationGif from "../assets/gifs/dumbbell-pronation-supination.gif";
+import farmersCarryGif from "../assets/gifs/farmers-carry.gif";
+import dumbbellDeadBugGif from "../assets/gifs/dumbbell-dead-bug.gif";
 
 const API_URL = "http://localhost:3000";
 
@@ -55,9 +81,35 @@ const exerciseGifs = {
   "reverse-wrist-curl.gif": reverseWristCurlGif,
   "wrist-extension.gif": wristExtensionGif,
   "abs-plank.gif": absPlankGif,
+  "incline-dumbbell-press.gif": inclineDumbbellPressGif,
+  "dumbbell-pullover.gif": dumbbellPulloverGif,
+  "incline-dumbbell-fly.gif": inclineDumbbellFlyGif,
+  "dumbbell-floor-press.gif": dumbbellFloorPressGif,
+  "arnold-press.gif": arnoldPressGif,
+  "seated-dumbbell-shoulder-press.gif": seatedDumbbellShoulderPressGif,
+  "dumbbell-lateral-raise.gif": dumbbellLateralRaiseGif,
+  "bent-over-reverse-fly.gif": bentOverReverseFlyGif,
+  "close-grip-dumbbell-press.gif": closeGripDumbbellPressGif,
+  "single-arm-triceps-extension.gif": singleArmTricepsExtensionGif,
+  "dumbbell-tate-press.gif": dumbbellTatePressGif,
+  "diamond-push-up.gif": diamondPushUpGif,
+  "weighted-russian-twist.gif": weightedRussianTwistGif,
+  "one-arm-dumbbell-row.gif": oneArmDumbbellRowGif,
+  "renegade-row.gif": renegadeRowGif,
+  "dumbbell-romanian-deadlift.gif": dumbbellRomanianDeadliftGif,
+  "chest-supported-dumbbell-row.gif": chestSupportedDumbbellRowGif,
+  "zottman-curl.gif": zottmanCurlGif,
+  "incline-dumbbell-curl.gif": inclineDumbbellCurlGif,
+  "cross-body-hammer-curl.gif": crossBodyHammerCurlGif,
+  "dumbbell-drag-curl.gif": dumbbellDragCurlGif,
+  "seated-dumbbell-wrist-curl.gif": seatedDumbbellWristCurlGif,
+  "dumbbell-reverse-curl.gif": dumbbellReverseCurlGif,
+  "dumbbell-pronation-supination.gif": dumbbellPronationSupinationGif,
+  "farmers-carry.gif": farmersCarryGif,
+  "dumbbell-dead-bug.gif": dumbbellDeadBugGif,
 };
 
-//Organizes muscle groups using the program ID
+//rganizes muscle groups using the program ID
 function preparePrograms(programs) {
     const preparedPrograms = {};
 
@@ -68,7 +120,7 @@ function preparePrograms(programs) {
     return preparedPrograms;
 }
 
-//Adds correct GIF file to every exercise
+//adds correct GIF file to every exercise
 function prepareExercises(exercises) {
     return exercises.map((exercise) => ({
         ...exercise,
@@ -76,7 +128,7 @@ function prepareExercises(exercises) {
     }));
 }
 
-//Loads initial data directly from dbjson
+//loads initial data directly from dbjson
 function getInitialWorkoutData() {
     return {
         programs: preparePrograms(database.programs),
@@ -84,7 +136,7 @@ function getInitialWorkoutData() {
     };
 }
 
-// Loads data from Api OR uses db.json if the request fails
+//loads data from Api OR uses db.json if the request fails
 async function getWorkoutData() {
     try {
         const programResponse = await fetch(`${API_URL}/programs`);

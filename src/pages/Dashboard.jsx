@@ -1,13 +1,9 @@
- //Displays workout cards, daily activities, the application header, and bottom navigation
-
+// Displays workout cards, daily activities, the application header, and bottom navigation
 import Header from "../components/Header";
 import BottomMenu from "../components/BottomMenu";
 import WorkoutList from "../components/WorkoutList";
 
-import runningIcon from "../assets/icons/running.svg";
-import hiitIcon from "../assets/icons/hiit.svg";
-
-function Dashboard({ workoutCards, bottomMenuItems }) {
+function Dashboard({ workoutCards, dailyActivities, bottomMenuItems }) {
   return (
     <div className="app-shell">
       <Header />
@@ -33,29 +29,19 @@ function Dashboard({ workoutCards, bottomMenuItems }) {
             Activity of the day
           </h2>
 
-          <article className="today-card">
-            <div className="today-card__name">
-              <img src={runningIcon} alt="Running" />
-              <span>Fast Running</span>
-            </div>
+          {dailyActivities.map((activity) => (
+            <article className="today-card" key={activity.id}>
+              <div className="today-card__name">
+                <img src={activity.icon} alt="" />
+                <span>{activity.title}</span>
+              </div>
 
-            <p className="today-card__value">
-              <strong>10</strong>
-              <span>km</span>
-            </p>
-          </article>
-
-          <article className="today-card">
-            <div className="today-card__name">
-              <img src={hiitIcon} alt="" />
-              <span>Hiit</span>
-            </div>
-
-            <p className="today-card__value">
-              <strong>40</strong>
-              <span>min</span>
-            </p>
-          </article>
+              <p className="today-card__value">
+                <strong>{activity.value}</strong>
+                <span>{activity.unit}</span>
+              </p>
+            </article>
+          ))}
         </section>
       </main>
 

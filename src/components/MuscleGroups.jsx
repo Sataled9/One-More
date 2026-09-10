@@ -1,5 +1,4 @@
 //Presentation component for displaying muscle groups
-
 function MuscleGroups({ activeDay, cards }) {
   return (
     <section

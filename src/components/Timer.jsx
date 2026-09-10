@@ -1,10 +1,13 @@
 //Presentation component for displaying the program countdown
-
-function Timer({ daysRemaining, progressPercentage }) {
+function Timer({
+    daysRemaining,
+    progressPercentage,
+    title = "Program change",
+}) {
     return (
         <section className="program-timer" aria-label="Program countdown">
             <div className="program-timer__text">
-                <p className="program-timer__title">Program change</p>
+                <p className="program-timer__title">{title}</p>
                 <p className="program-timer__value">{daysRemaining} days remaining</p>
             </div>
 

@@ -604,6 +604,155 @@
 
 //program timer style end
 
+//Running page start
+.running {
+  flex: 1;
+  padding: 0 16px 24px;
+  overflow-y: auto;
+
+  &__sessions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+
+    div {
+      display: flex;
+      min-width: 0;
+      min-height: 82px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 6px;
+      text-align: center;
+      background-color: $color-card;
+      border-radius: 16px;
+    }
+
+    span {
+      color: $color-gray-light;
+      font-size: 0.68rem;
+    }
+
+    strong {
+      color: $color-accent;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__warmup {
+    margin-top: 16px;
+
+    h1 {
+      font-size: 0.92rem;
+    }
+
+    p {
+      margin-top: 7px;
+      color: $color-gray-light;
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__warmup-exercises {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  &__complete-button {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 16px;
+    color: $color-background-font;
+    font-weight: 700;
+    background-color: $color-accent;
+    border-radius: 16px;
+
+    &:disabled {
+      opacity: 0.55;
+    }
+  }
+
+  .exercise-preview > img {
+    object-fit: contain;
+  }
+
+  @media (max-width: 360px) {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &__sessions,
+    &__details {
+      gap: 5px;
+    }
+  }
+}
+
+.warmup-exercise {
+  min-height: 46px;
+  padding: 8px;
+  color: $color-background-font;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background-color: $color-card;
+  border-radius: 12px;
+
+  &--active {
+    background-color: $color-accent;
+  }
+}
+
+.running-session {
+  display: flex;
+  min-width: 0;
+  min-height: 96px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 5px;
+  color: $color-background-font;
+  text-align: center;
+  background-color: $color-card;
+  border-radius: 18px;
+
+  &__day {
+    color: $color-accent;
+    font-size: 0.72rem;
+  }
+
+  strong {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  > span:last-child {
+    color: $color-gray-light;
+    font-size: 0.72rem;
+  }
+
+  &--active {
+    background-color: $color-accent;
+
+    .running-session__day,
+    > span:last-child {
+      color: $color-background-font;
+    }
+  }
+}
+//Running page end
+
 // Statistics page styles start
 .statistics {
   flex: 1;
@@ -678,7 +827,7 @@
 // Statistic card component
 .statistic-card {
   display: grid;
-  grid-template-columns: 54px 1fr 58px;
+  grid-template-columns: 54px 1fr;
   align-items: center;
   gap: 12px;
 
@@ -762,7 +911,7 @@
   }
 
   @media (max-width: 360px) {
-    grid-template-columns: 48px 1fr 50px;
+    grid-template-columns: 48px 1fr;
     gap: 9px;
 
     &__icon {
@@ -805,6 +954,7 @@
   }
 
   &__area {
+    fill: $color-accent;
     opacity: 0.32;
   }
 
@@ -822,9 +972,9 @@
     stroke-width: 5;
   }
 }
-// Statistic chart component end
+//statistic chart component end
 
-// Settings page
+//settings page
 .settings {
   flex: 1;
   padding: 8px 36px 24px;
@@ -847,8 +997,6 @@
     font-size: 1.15rem;
     text-align: left;
     background-color: transparent;
-    cursor: default;
-    opacity: 1;
   }
 
   &__arrow {
@@ -856,8 +1004,107 @@
     height: 13px;
     border-top: 2px solid $color-background-font;
     border-right: 2px solid $color-background-font;
-    flex-shrink: 0;
     transform: rotate(45deg);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: $color-card;
+    border-radius: 18px;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      color: $color-gray-light;
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: $color-gray-light;
+      font-size: 0.76rem;
+    }
+
+    input {
+      width: 100%;
+      min-height: 42px;
+      padding: 8px 10px;
+      color: $color-background-font;
+      background-color: $color-background;
+      border: 1px solid #3d739e;
+      border-radius: 10px;
+    }
+  }
+
+  &__check {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      width: 22px;
+      min-height: 22px;
+      accent-color: $color-accent;
+    }
+  }
+
+  &__save-button,
+  &__secondary-button {
+    min-height: 44px;
+    padding: 8px 12px;
+    color: $color-background-font;
+    font-weight: 700;
+    background-color: $color-accent;
+    border-radius: 12px;
+  }
+
+  &__secondary-button {
+    background-color: #3d739e;
+  }
+
+  &__save-button {
+    width: 100%;
+  }
+
+  &__message {
+    margin-top: 10px;
+    color: #29df83;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  &__history {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 10px;
+      padding: 10px;
+      background-color: $color-background;
+      border-radius: 10px;
+    }
+
+    strong,
+    span {
+      font-size: 0.7rem;
+    }
+
+    article span:last-child {
+      grid-column: 1 / -1;
+      color: $color-gray-light;
+    }
   }
 
   @media (max-width: 360px) {

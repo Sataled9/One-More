@@ -1,8 +1,10 @@
 const shortDayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 //the 5 day calendar and assigns the correct workout program
-function createWorkoutDays(currentDate = new Date()) {
+function createWorkoutDays(currentDate = new Date(), activeCycle = 1) {
   const workoutDays = [];
+  const mondayAndFridayProgramId = activeCycle === 2 ? 3 : 1;
+  const wednesdayProgramId = activeCycle === 2 ? 4 : 2;
 
   for (let dayDifference = -2; dayDifference <= 2; dayDifference += 1) {
     const date = new Date(currentDate);
@@ -13,11 +15,11 @@ function createWorkoutDays(currentDate = new Date()) {
     let programId = null;
 
     if (weekDay === 1 || weekDay === 5) {
-      programId = 1;
+      programId = mondayAndFridayProgramId;
     }
 
     if (weekDay === 3) {
-      programId = 2;
+      programId = wednesdayProgramId;
     }
 
     const year = date.getFullYear();

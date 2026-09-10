@@ -1,5 +1,4 @@
 //Presentation component for displaying the selected exercise
-
 function ExercisePreview({ exercise }) {
   return (
     <section
